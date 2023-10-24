@@ -54,21 +54,10 @@ dependencyManagement {
 contracts {
 	contractsDslDir = file("src/test/resources/contracts")
 	testFramework = "JUNIT5"
-	packageWithBaseClasses = 'cdc'
 	baseClassMappings {
 		baseClassMapping(".*cdc.*", "cdc.BaseTestClass")
 	}
 }
-
-//contracts {
-//	// To have the same contract folder as Maven. In Gradle would default to
-//	// src/contractTest/resources/contracts
-//	contractsDslDir = file("src/test/resources/contracts")
-//	packageWithBaseClasses = 'hello'
-//	baseClassMappings {
-//		baseClassMapping(".*hello.*", "hello.BaseClass")
-//	}
-//}
 
 contractTest {
 	useJUnitPlatform()

@@ -1,4 +1,4 @@
-package contracts
+package contracts.cdc
 
 import org.springframework.cloud.contract.spec.Contract
 Contract.make {
