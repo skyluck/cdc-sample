@@ -18,8 +18,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @AutoConfigureJsonTesters
 @AutoConfigureStubRunner(
-        stubsMode = StubRunnerProperties.StubsMode.LOCAL,
-        ids = "com.cdc:provider-gradle:+:stubs:8090")
+        stubsMode = StubRunnerProperties.StubsMode.REMOTE,
+        repositoryRoot = "http://localhost:8081/repository/maven-releases/",
+        ids = "com.cdc:provider-gradle-stubs:+:stubs:8090")
 public class MathControllerTest {
 
     @Autowired
